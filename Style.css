@@ -70,6 +70,17 @@ p {
     height: auto;
     object-fit: cover;
     z-index: 1;
+
+    opacity: 0;
+    transform: translateX(50px);
+    animation: hatFadeIn 1.5s ease forwards;
+}
+
+@keyframes hatFadeIn {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 .matrix-background-video {
@@ -97,6 +108,17 @@ h4 {
     margin: 10px 0;
     font-size: 18px;
     color: white;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1.0s ease, transform 1.0s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .project1 {

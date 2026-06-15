@@ -32,35 +32,35 @@
     <p>Here are some of the projects I've worked on:</p>
 
     <div class="projects-section">
-        <div class="project1">
+        <div class="project1 fade-in">
             <a href="https://hatter135.github.io/Door-Detective/" class="project1" target="_blank">
                 <img src="Images/Door Detective.png" alt="Project 1" class="project1">
             <h4 class="project1">Project 1 Collaboration With Denin Heir: Door Detective: Web Edition</h4>
             </a>
         </div>
         
-        <div class="project2">
+        <div class="project2 fade-in">
             <a href="https://hatter135.github.io/Hot-Beans-Website-For-UNIT-6/" class="project2" target="_blank">
                 <video src="Videos/Hot-Beans.mp4" alt="Project 2" class="project2" autoplay muted loop></video>
                 <h4 class="project2">Project 2: HotBeans.com</h4>
             </a>
         </div>
 
-        <div class="project3">
+        <div class="project3 fade-in">
             <a href="https://hatter135.github.io/ThermalCore.com/" class="project3" target="_blank">
                 <video src="Videos/ThermalCore.mp4" alt="Project 3" class="project3" autoplay muted loop></video>
                 <h4 class="project3">Project 3: ThermalCore.com</h4>
             </a>
         </div>
 
-        <div class="project4">
+        <div class="project4 fade-in">
             <a href="https://hatter135.github.io/TTS-Webapp/" class="project4" target="_blank">
                 <img src="Images/TTS Webapp.png" alt="Project 4" class="project4" autoplay muted loop>
                 <h4 class="project4">Project 4: TTS Webapp</h4>
             </a>
         </div>
 
-        <div class="project5">
+        <div class="project5 fade-in">
             <a href="https://rainsnotallowed.github.io/POWER-pc-/" class="project5" target="_blank">
                 <img src="Images/POWER-pc.png" alt="Project 5" class="project5" autoplay muted loop>
                 <h4 class="project5-text">Project 5 Collaboration with Denin Heir and Josh Francis: POWER-pc.com</h4>
@@ -72,5 +72,20 @@
 
 
     </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const fadeIns = document.querySelectorAll('.fade-in');
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.2 });
+
+            fadeIns.forEach(el => observer.observe(el));
+        });
+    </script>
 </body>
 </html>
