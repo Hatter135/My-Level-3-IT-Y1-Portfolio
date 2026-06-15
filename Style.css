@@ -1,6 +1,9 @@
 
 body {
     padding-top: 200px;
+
+
+
 }
 
 .navbar {
@@ -229,6 +232,37 @@ body {
     min-height: 100vh;
 }
 
+
+.skill {
+    position: relative;
+}
+
+.tooltip {
+    position: absolute;
+    top: 50%;
+    right: 105%;
+    transform: translateY(-50%);
+
+    width: 250px;
+    padding: 10px;
+
+    background: #222;
+    color: #fff;
+    border-radius: 8px;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.25s ease;
+
+    pointer-events: none;
+    z-index: 10;
+}
+
+.skill:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+}
+
 .skills {
     max-width: 600px;
     margin: 50px auto;
@@ -263,19 +297,19 @@ body {
 }
 
 .fill.html {
-    width: 90%;
+    width: 95%;
 }
 
 .fill.css {
-    width: 80%;
+    width: 85%;
 }
 
 .fill.javascript {
-    width: 75%;
+    width: 80%;
 }
 
 .fill.python {
-    width: 65%;
+    width: 75%;
 }
 
 @keyframes grow {
