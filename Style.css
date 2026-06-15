@@ -66,7 +66,7 @@ p {
     position: fixed;
     bottom: 0;
     right: 0;
-    width: 50%;
+    width: 30%;
     height: auto;
     object-fit: cover;
     z-index: 1;
@@ -74,6 +74,12 @@ p {
     opacity: 0;
     transform: translateX(50px);
     animation: hatFadeIn 1.5s ease forwards;
+}
+
+.hatt-background-image:hover {
+    filter: brightness(0.8);
+    opacity: 0.3;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 @keyframes hatFadeIn {
