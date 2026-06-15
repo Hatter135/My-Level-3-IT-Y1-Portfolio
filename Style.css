@@ -93,6 +93,12 @@ p {
     margin-right: auto;
 }
 
+h4 {
+    margin: 10px 0;
+    font-size: 18px;
+    color: white;
+}
+
 .project1 {
     margin: 10px 0;
     font-size: 18px;
@@ -127,6 +133,22 @@ p {
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
+.project3 {
+    margin: 10px 0;
+    font-size: 18px;
+    width: 100%;
+    height: 100%;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.project3:hover {
+    color: lime;
+    transform: scale(1.05);
+    transition: color 0.3s ease, transform 0.3s ease;
+}
 
 body {
     margin: 0;
